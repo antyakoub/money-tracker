@@ -33,7 +33,7 @@ function App() {
         <div className='Description'>
           <input type="text"
                 value={description}
-                onChange={ev => setDescription(ev.value.target)}
+                onChange={ev => setDescription(ev.target.value)}
                 placeholder={'description'}/>
         </div>
         
