@@ -1,7 +1,8 @@
 const mongoose = require("mongoose");
-const {Schema, model} = mongoose; 
+const {Schema, model} = "mongoose"; 
 
-const TransactionSchema = new Schema({
+
+const TransactionSchema = mongoose.Schema({
     name: {type: String, required:true},
     price: {type: Number, required:true},
     description: {type: String, required:true},
@@ -9,6 +10,6 @@ const TransactionSchema = new Schema({
 
 });
 
-const TransactionModel = model('Transaction', TransactionSchema);
+const TransactionModel = mongoose.model('Transaction', TransactionSchema);
 
 module.exports = TransactionModel
